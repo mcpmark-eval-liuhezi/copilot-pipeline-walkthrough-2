@@ -1,0 +1,15 @@
+name: CI Pipeline
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Greet
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+      - name: Say hello
+        run: echo "Hello from the CI Pipeline walkthrough!"
